@@ -76,11 +76,13 @@ The provider boundary is deliberately separate from product logic. The POC can r
 - **Ollama >= 0.34.1** with an 8K runtime context for the POC. The learner currently has Ollama 0.40.1. Docs: https://docs.ollama.com/
 - **Default provider: Spark-X2.5-4B Q4_K_M** (`XHToken/Spark-X2.5-4B-GGUF`), running locally. The downloaded gate artifact is 2,600,224,352 bytes with SHA-256 `adfcfa19a4ed6a5985da8bf565fe15f8e1a7e131d79bae2d19d48d1c40109428`.
 - Runtime product settings tested first: `num_ctx=8192`, `temperature=0`, fixed `seed=42`, `top_p=0.9`, `think=false`, and task-specific output-token caps. These are product-repeatability settings, not benchmark settings.
-- The provider interface remains model-neutral. A cloud implementation is deferred outside this POC. Earlier Spark feasibility runs supported keeping the critical path local-only; after the shipping audit corrected the prepared competition rubric, the final repeated gate must be regenerated before publication. No unused paid fallback service is added meanwhile.
+- The provider interface remains model-neutral. A cloud implementation is deferred outside this POC. The corrected official-rubric Spark gate passed 3/3 repeated runs, so the critical path remains local-only and no unused paid fallback service is added.
 
 ## Where It Runs and How Someone Tries It
 
 The judged POC runs locally on macOS for the required demo recording. A public GitHub repository and short demo video are submission artifacts; a live hosted URL is optional and is not required to prove this local-model architecture.
+
+Public repository: `https://github.com/yangmengze608-afk/ContriPact-DevpostLearn`
 
 ### Expected environment
 - Node.js 24 LTS
