@@ -1,0 +1,55 @@
+{
+  "test": "rules",
+  "model": "contripact-spark-x2.5-4b-q4",
+  "passed": true,
+  "checks": {
+    "exact_criterion_set": true,
+    "weights_exact": true,
+    "weights_sum_100": true,
+    "no_extra_criteria": true,
+    "quotes_trace_to_brief": true
+  },
+  "metrics": {
+    "wall_seconds": 10.306,
+    "load_seconds": 0.005,
+    "prompt_tokens": 264,
+    "output_tokens": 237,
+    "generation_seconds": 9.927,
+    "tokens_per_second": 23.87,
+    "done_reason": "stop"
+  },
+  "memory_snapshot": [
+    {
+      "rss_mb": 15.8,
+      "command": "/opt/homebrew/bin/ollama serve"
+    }
+  ],
+  "output": {
+    "criteria": [
+      {
+        "evidence_quote": "Product usefulness (35%)",
+        "name": "Product usefulness",
+        "reason": "Weight 35% per brief.",
+        "weight": 35
+      },
+      {
+        "evidence_quote": "Technical implementation (30%)",
+        "name": "Technical implementation",
+        "reason": "Weight 30% per brief.",
+        "weight": 30
+      },
+      {
+        "evidence_quote": "Innovation (20%)",
+        "name": "Innovation",
+        "reason": "Weight 20% per brief.",
+        "weight": 20
+      },
+      {
+        "evidence_quote": "Demo and communication (15%)",
+        "name": "Demo and communication",
+        "reason": "Weight 15% per brief.",
+        "weight": 15
+      }
+    ]
+  }
+}

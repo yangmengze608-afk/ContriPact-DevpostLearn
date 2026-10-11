@@ -1,0 +1,137 @@
+{
+  "rubric": [
+    {
+      "name": "Design",
+      "weight": 25
+    },
+    {
+      "name": "Potential Impact",
+      "weight": 25
+    },
+    {
+      "name": "Innovation/Idea",
+      "weight": 25
+    },
+    {
+      "name": "Presentation",
+      "weight": 25
+    }
+  ],
+  "runs_all_passed": [
+    true,
+    true,
+    true
+  ],
+  "all_three_passed": true,
+  "exact_output_equality": {
+    "rules": true,
+    "before": true,
+    "contribution": true,
+    "objection": true
+  },
+  "shares_by_run": [
+    {
+      "B": 35,
+      "A": 30,
+      "C": 20,
+      "D": 15
+    },
+    {
+      "B": 35,
+      "A": 30,
+      "C": 20,
+      "D": 15
+    },
+    {
+      "B": 35,
+      "A": 30,
+      "C": 20,
+      "D": 15
+    }
+  ],
+  "shares_identical": true,
+  "stable_shares": {
+    "B": 35,
+    "A": 30,
+    "C": 20,
+    "D": 15
+  },
+  "o2_by_run": [
+    {
+      "changes_contribution_assessment": false,
+      "evidence_ids": [
+        "D1"
+      ],
+      "objection_id": "O2",
+      "reason": "Objection correctly links D1 to Presentation, supporting the current assessment.",
+      "recommendation_action": "keep",
+      "rule_connection": "Presentation",
+      "support": "supported"
+    },
+    {
+      "changes_contribution_assessment": false,
+      "evidence_ids": [
+        "D1"
+      ],
+      "objection_id": "O2",
+      "reason": "Objection correctly links D1 to Presentation, supporting the current assessment.",
+      "recommendation_action": "keep",
+      "rule_connection": "Presentation",
+      "support": "supported"
+    },
+    {
+      "changes_contribution_assessment": false,
+      "evidence_ids": [
+        "D1"
+      ],
+      "objection_id": "O2",
+      "reason": "Objection correctly links D1 to Presentation, supporting the current assessment.",
+      "recommendation_action": "keep",
+      "rule_connection": "Presentation",
+      "support": "supported"
+    }
+  ],
+  "o2_identical": true,
+  "wall_seconds": {
+    "rules": {
+      "values": [
+        13.706,
+        12.256,
+        27.893
+      ],
+      "min": 12.256,
+      "max": 27.893,
+      "mean": 17.952
+    },
+    "before": {
+      "values": [
+        26.605,
+        47.651,
+        36.742
+      ],
+      "min": 26.605,
+      "max": 47.651,
+      "mean": 36.999
+    },
+    "contribution": {
+      "values": [
+        23.045,
+        60.954,
+        33.118
+      ],
+      "min": 23.045,
+      "max": 60.954,
+      "mean": 39.039
+    },
+    "objection": {
+      "values": [
+        24.038,
+        34.524,
+        30.581
+      ],
+      "min": 24.038,
+      "max": 34.524,
+      "mean": 29.714
+    }
+  }
+}

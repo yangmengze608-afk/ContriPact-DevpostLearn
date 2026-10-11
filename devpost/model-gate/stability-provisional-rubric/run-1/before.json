@@ -1,0 +1,76 @@
+{
+  "test": "before",
+  "model": "contripact-spark-x2.5-4b-q4",
+  "passed": true,
+  "checks": {
+    "exact_task_set": true,
+    "criterion_links_valid": true,
+    "has_high_value_work": true,
+    "has_supporting_work": true,
+    "core_build_links_technical": true,
+    "model_gate_links_technical": true,
+    "demo_video_links_demo": true,
+    "submission_logistics_supporting": true
+  },
+  "metrics": {
+    "wall_seconds": 15.56,
+    "load_seconds": 0.003,
+    "prompt_tokens": 424,
+    "output_tokens": 365,
+    "generation_seconds": 15.274,
+    "tokens_per_second": 23.9,
+    "done_reason": "stop"
+  },
+  "memory_snapshot": [
+    {
+      "rss_mb": 15.5,
+      "command": "/opt/homebrew/bin/ollama serve"
+    }
+  ],
+  "output": {
+    "tasks": [
+      {
+        "contribution_relevance": "High",
+        "linked_criteria": [
+          "Product usefulness",
+          "Technical implementation"
+        ],
+        "reason": "Builds core workspace and adapter for product usefulness and technical implementation.",
+        "task_id": "T1"
+      },
+      {
+        "contribution_relevance": "High",
+        "linked_criteria": [
+          "Product usefulness",
+          "Technical implementation",
+          "Innovation"
+        ],
+        "reason": "Creates automated harness and validators for product usefulness, technical, and innovation.",
+        "task_id": "T2"
+      },
+      {
+        "contribution_relevance": "High",
+        "linked_criteria": [
+          "Product usefulness",
+          "Demo and communication"
+        ],
+        "reason": "Designs bilingual landing page for product usefulness and demo and communication.",
+        "task_id": "T3"
+      },
+      {
+        "contribution_relevance": "High",
+        "linked_criteria": [
+          "Demo and communication"
+        ],
+        "reason": "Creates final demo video and submission package for demo and communication.",
+        "task_id": "T4"
+      },
+      {
+        "contribution_relevance": "Supporting",
+        "linked_criteria": [],
+        "reason": "Handles submission logistics, which is supporting work, not a scored deliverable.",
+        "task_id": "T5"
+      }
+    ]
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "test": "rules",
+  "model": "contripact-spark-x2.5-4b-q4",
+  "passed": true,
+  "checks": {
+    "exact_criterion_set": true,
+    "weights_exact": true,
+    "weights_sum_100": true,
+    "no_extra_criteria": true,
+    "quotes_trace_to_brief": true
+  },
+  "metrics": {
+    "wall_seconds": 12.256,
+    "load_seconds": 0.009,
+    "prompt_tokens": 260,
+    "output_tokens": 247,
+    "generation_seconds": 10.778,
+    "tokens_per_second": 22.92,
+    "done_reason": "stop"
+  },
+  "memory_snapshot": [
+    {
+      "rss_mb": 14.3
+    }
+  ],
+  "output": {
+    "criteria": [
+      {
+        "evidence_quote": "Design (25%)",
+        "name": "Design",
+        "reason": "Preserved exact name and 25% weight.",
+        "weight": 25
+      },
+      {
+        "evidence_quote": "Potential Impact (25%)",
+        "name": "Potential Impact",
+        "reason": "Preserved exact name and 25% weight.",
+        "weight": 25
+      },
+      {
+        "evidence_quote": "Innovation/Idea (25%)",
+        "name": "Innovation/Idea",
+        "reason": "Preserved exact name and 25% weight.",
+        "weight": 25
+      },
+      {
+        "evidence_quote": "Presentation (25%)",
+        "name": "Presentation",
+        "reason": "Preserved exact name and 25% weight.",
+        "weight": 25
+      }
+    ]
+  }
+}

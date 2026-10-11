@@ -1,0 +1,207 @@
+{
+  "runs_passed": 3,
+  "all_three_passed": true,
+  "shares_by_run": [
+    {
+      "A": 35,
+      "B": 25,
+      "C": 20,
+      "D": 20
+    },
+    {
+      "A": 35,
+      "B": 25,
+      "C": 20,
+      "D": 20
+    },
+    {
+      "A": 35,
+      "B": 25,
+      "C": 20,
+      "D": 20
+    }
+  ],
+  "shares_identical": true,
+  "before_by_run": [
+    {
+      "T1": [
+        "High",
+        [
+          "Product usefulness",
+          "Technical implementation"
+        ]
+      ],
+      "T2": [
+        "High",
+        [
+          "Product usefulness",
+          "Technical implementation",
+          "Innovation"
+        ]
+      ],
+      "T3": [
+        "High",
+        [
+          "Product usefulness",
+          "Demo and communication"
+        ]
+      ],
+      "T4": [
+        "High",
+        [
+          "Demo and communication"
+        ]
+      ],
+      "T5": [
+        "Supporting",
+        []
+      ]
+    },
+    {
+      "T1": [
+        "High",
+        [
+          "Product usefulness",
+          "Technical implementation"
+        ]
+      ],
+      "T2": [
+        "High",
+        [
+          "Product usefulness",
+          "Technical implementation",
+          "Innovation"
+        ]
+      ],
+      "T3": [
+        "High",
+        [
+          "Product usefulness",
+          "Demo and communication"
+        ]
+      ],
+      "T4": [
+        "High",
+        [
+          "Demo and communication"
+        ]
+      ],
+      "T5": [
+        "Supporting",
+        []
+      ]
+    },
+    {
+      "T1": [
+        "High",
+        [
+          "Product usefulness",
+          "Technical implementation"
+        ]
+      ],
+      "T2": [
+        "High",
+        [
+          "Product usefulness",
+          "Technical implementation",
+          "Innovation"
+        ]
+      ],
+      "T3": [
+        "High",
+        [
+          "Product usefulness",
+          "Demo and communication"
+        ]
+      ],
+      "T4": [
+        "High",
+        [
+          "Demo and communication"
+        ]
+      ],
+      "T5": [
+        "Supporting",
+        []
+      ]
+    }
+  ],
+  "before_identical": true,
+  "o2_by_run": [
+    {
+      "changes_contribution_assessment": false,
+      "evidence_ids": [
+        "D1"
+      ],
+      "objection_id": "O2",
+      "reason": "D1 explicitly shows D produced the demo video, directly supporting the Demo and communication criterion.",
+      "recommendation_action": "keep",
+      "rule_connection": "Demo and communication",
+      "support": "supported"
+    },
+    {
+      "changes_contribution_assessment": false,
+      "evidence_ids": [
+        "D1"
+      ],
+      "objection_id": "O2",
+      "reason": "D1 explicitly shows D produced the demo video, directly supporting the Demo and communication criterion.",
+      "recommendation_action": "keep",
+      "rule_connection": "Demo and communication",
+      "support": "supported"
+    },
+    {
+      "changes_contribution_assessment": false,
+      "evidence_ids": [
+        "D1"
+      ],
+      "objection_id": "O2",
+      "reason": "D1 explicitly shows D produced the demo video, directly supporting the Demo and communication criterion.",
+      "recommendation_action": "keep",
+      "rule_connection": "Demo and communication",
+      "support": "supported"
+    }
+  ],
+  "metrics": {
+    "rules": {
+      "values": [
+        10.306,
+        10.272,
+        10.155
+      ],
+      "mean": 10.24,
+      "min": 10.155,
+      "max": 10.306
+    },
+    "before": {
+      "values": [
+        15.56,
+        15.428,
+        15.689
+      ],
+      "mean": 15.56,
+      "min": 15.428,
+      "max": 15.689
+    },
+    "contribution": {
+      "values": [
+        16.822,
+        16.869,
+        19.454
+      ],
+      "mean": 17.71,
+      "min": 16.822,
+      "max": 19.454
+    },
+    "objection": {
+      "values": [
+        15.024,
+        13.994,
+        14.707
+      ],
+      "mean": 14.57,
+      "min": 13.994,
+      "max": 15.024
+    }
+  }
+}

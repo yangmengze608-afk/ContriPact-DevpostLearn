@@ -1,0 +1,13 @@
+/devpost/learner-profile.md
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Local model-gate / Python artifacts
+/devpost/model-gate/__pycache__/
+/devpost/model-gate/Modelfile
+/devpost/model-gate/stability/
+/devpost/model-gate/stability-seeded/

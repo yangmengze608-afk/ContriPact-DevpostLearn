@@ -1,0 +1,74 @@
+{
+  "test": "before",
+  "model": "contripact-spark-x2.5-4b-q4",
+  "passed": true,
+  "checks": {
+    "exact_task_set": true,
+    "criterion_links_valid": true,
+    "has_high_value_work": true,
+    "has_supporting_work": true,
+    "core_build_links_design": true,
+    "model_gate_links_design_or_innovation": true,
+    "demo_video_links_presentation": true,
+    "submission_logistics_supporting": true
+  },
+  "metrics": {
+    "wall_seconds": 26.605,
+    "load_seconds": 0.096,
+    "prompt_tokens": 425,
+    "output_tokens": 330,
+    "generation_seconds": 25.833,
+    "tokens_per_second": 12.77,
+    "done_reason": "stop"
+  },
+  "memory_snapshot": [
+    {
+      "rss_mb": 9.8
+    }
+  ],
+  "output": {
+    "tasks": [
+      {
+        "contribution_relevance": "High",
+        "linked_criteria": [
+          "Design",
+          "Innovation/Idea"
+        ],
+        "reason": "T1 builds the core workspace and adapter, directly influencing Design and Innovation.",
+        "task_id": "T1"
+      },
+      {
+        "contribution_relevance": "High",
+        "linked_criteria": [
+          "Potential Impact",
+          "Innovation/Idea"
+        ],
+        "reason": "T2 creates the evaluation harness, directly influencing Potential Impact and Innovation.",
+        "task_id": "T2"
+      },
+      {
+        "contribution_relevance": "High",
+        "linked_criteria": [
+          "Design",
+          "Presentation"
+        ],
+        "reason": "T3 designs the landing page, directly influencing Design and Presentation.",
+        "task_id": "T3"
+      },
+      {
+        "contribution_relevance": "High",
+        "linked_criteria": [
+          "Presentation"
+        ],
+        "reason": "T4 creates the final demo and package, directly influencing Presentation.",
+        "task_id": "T4"
+      },
+      {
+        "contribution_relevance": "Supporting",
+        "linked_criteria": [],
+        "reason": "T5 handles submission logistics, which is supporting work, not a scored deliverable.",
+        "task_id": "T5"
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ContriPact — App Map</title>
+<style>
+:root{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC",sans-serif;color:#171715;background:#f3f1ea;--paper:#fbfaf5;--line:#d8d2c6;--muted:#6e6a61;--ink:#171715}*{box-sizing:border-box}body{margin:0;padding:40px 22px 70px;background:radial-gradient(circle at 85% 4%,rgba(0,0,0,.055),transparent 25%),#f3f1ea}.wrap{max-width:1040px;margin:auto}.hero,.card{border:1px solid var(--line);background:rgba(251,250,245,.94);border-radius:20px;box-shadow:0 18px 45px rgba(35,31,24,.055)}.hero{padding:34px 36px;margin-bottom:18px;position:relative;overflow:hidden}.hero:after{content:'契';position:absolute;right:34px;top:-14px;font:120px Georgia,"Songti SC",serif;color:rgba(0,0,0,.035)}.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700}.hero h1{font:500 clamp(34px,6vw,58px)/1 Georgia,"Songti SC",serif;margin:14px 0}.hero p{max-width:760px;color:var(--muted);line-height:1.7}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{padding:25px}.card h2{font:500 25px Georgia,"Songti SC",serif;margin:0 0 10px}.card p,.card li{color:#55514a;line-height:1.65;font-size:14px}.wide{grid-column:1/-1}.diagram{overflow:auto;padding:10px 0}.diagram svg{min-width:820px;width:100%;height:auto}.route{display:grid;gap:12px}.stop{border-left:3px solid #292825;padding:10px 0 10px 16px}.stop code,.pointer code{font-size:12px;background:#efede5;border:1px solid #ddd7cb;border-radius:6px;padding:3px 6px}.stop strong{display:block;margin-bottom:5px}.pointers{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.pointer{padding:14px;border:1px solid #ded8cc;border-radius:13px;background:#f7f5ee}.practice{border:1px solid #c9c2b4;background:#ece9df}.practice strong{color:#191816}.meta{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.pill{border:1px solid #d6d0c4;border-radius:999px;padding:6px 9px;font-size:11px;color:#666159;background:#f8f6f0}details{margin-top:10px;border-top:1px solid #e1dcd2;padding-top:10px}summary{cursor:pointer;font-weight:650}a{color:#171715}kbd{border:1px solid #cbc5ba;border-bottom-width:2px;border-radius:5px;padding:1px 5px;background:white}@media(max-width:760px){.grid,.pointers{grid-template-columns:1fr}.hero,.card{padding:22px}.hero:after{font-size:82px;right:8px}.wide{grid-column:auto}}
+</style>
+</head>
+<body>
+<main class="wrap">
+<section class="hero">
+<div class="eyebrow">ContriPact · take-home map</div>
+<h1>Rules → evidence → proposal → objection.</h1>
+<p>ContriPact is a local proof of concept for making team reward allocation inspectable and contestable. The AI does not decide objective fairness: it maps supplied competition rules and evidence into a validated proposal, then the team decides whether to accept it.</p>
+<div class="meta"><span class="pill">Snapshot commit: a321a20</span><span class="pill">React + Vite</span><span class="pill">Express</span><span class="pill">Ollama / Spark-X2.5-4B</span><span class="pill">Process-memory cache</span></div>
+</section>
+
+<div class="grid">
+<section class="card wide">
+<h2>One real action through the app</h2>
+<p>Follow the <strong>After → O2 objection</strong> path. The browser requests analysis; the server replaces untrusted browser facts with the canonical prepared case; the provider asks Spark for structured JSON; validators reject unsupported or untraceable claims; only validated results are cached and rendered.</p>
+<div class="diagram" aria-label="After and objection request flow">
+<svg viewBox="0 0 980 250" role="img" aria-labelledby="flowTitle flowDesc">
+<title id="flowTitle">ContriPact validated AI request flow</title>
+<desc id="flowDesc">Workspace calls the API, Express applies canonical facts and cache keys, Ollama Spark generates structured output, validators approve it, then the workspace renders the proposal and objection result.</desc>
+<defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#403d37"/></marker></defs>
+<g font-family="Inter, sans-serif" font-size="13" fill="#171715">
+<rect x="20" y="70" width="170" height="100" rx="16" fill="#fbfaf5" stroke="#cfc8bc"/><text x="105" y="105" text-anchor="middle" font-weight="700">Workspace</text><text x="105" y="130" text-anchor="middle">runAfterAnalysis()</text><text x="105" y="150" text-anchor="middle">runObjection()</text>
+<rect x="250" y="45" width="190" height="150" rx="16" fill="#fbfaf5" stroke="#cfc8bc"/><text x="345" y="80" text-anchor="middle" font-weight="700">Express routes</text><text x="345" y="106" text-anchor="middle">canonical case facts</text><text x="345" y="127" text-anchor="middle">validated cache key</text><text x="345" y="148" text-anchor="middle">current After required</text>
+<rect x="500" y="45" width="190" height="150" rx="16" fill="#f0ede5" stroke="#bdb5a7"/><text x="595" y="80" text-anchor="middle" font-weight="700">OllamaSparkProvider</text><text x="595" y="106" text-anchor="middle">structured prompt</text><text x="595" y="127" text-anchor="middle">Spark local inference</text><text x="595" y="148" text-anchor="middle">validateAfter / Objection</text>
+<rect x="750" y="70" width="200" height="100" rx="16" fill="#e7ebe5" stroke="#aeb8aa"/><text x="850" y="105" text-anchor="middle" font-weight="700">Visible result</text><text x="850" y="130" text-anchor="middle">35 / 25 / 20 / 20</text><text x="850" y="150" text-anchor="middle">O2 supported, keep</text>
+<line x1="190" y1="120" x2="245" y2="120" stroke="#403d37" marker-end="url(#arrow)"/><line x1="440" y1="120" x2="495" y2="120" stroke="#403d37" marker-end="url(#arrow)"/><line x1="690" y1="120" x2="745" y2="120" stroke="#403d37" marker-end="url(#arrow)"/>
+<path d="M345 196 C345 232,595 232,595 198" fill="none" stroke="#817b70" stroke-dasharray="5 5" marker-end="url(#arrow)"/><text x="470" y="238" text-anchor="middle" fill="#69645c">validated result cached only after successful inference</text>
+</g></svg>
+</div>
+</section>
+
+<section class="card wide">
+<h2>Reference route — 3 useful stops</h2>
+<div class="route">
+<div class="stop"><strong>1. Visible action / state</strong><code>src/components/workspace/Workspace.tsx</code> — search <code>runAfterAnalysis</code> and <code>runObjection</code>. This is where the UI decides when After can run, when O2 can be checked, and when a team can accept the proposal.</div>
+<div class="stop"><strong>2. Trust boundary / cache</strong><code>server/routes/analysis.ts</code> — search <code>router.post('/after'</code>, <code>router.post('/objection'</code>, and <code>cachedAnalysis</code>. The route validates the scenario, uses canonical server-side facts, requires the current validated After result before O2, and caches only successful results.</div>
+<div class="stop"><strong>3. Model contract / rejection rules</strong><code>server/ai/ollamaSpark.ts</code> + <code>server/ai/validate.ts</code> — search <code>analyzeAfter</code>, <code>checkObjection</code>, <code>validateAfter</code>, and <code>validateObjection</code>. The model can propose; these validators decide whether that proposal is structurally and evidentially acceptable to the product.</div>
+</div>
+</section>
+
+<section class="card">
+<h2>To change this, start here</h2>
+<div class="pointers">
+<div class="pointer"><strong>Competition facts</strong><p><code>src/data/demoCase.ts</code><br/>Prepared brief, tasks, evidence, and objections.</p></div>
+<div class="pointer"><strong>AI instructions</strong><p><code>server/ai/prompts.ts</code><br/>What Spark is allowed to judge and how each task is framed.</p></div>
+<div class="pointer"><strong>Guardrails</strong><p><code>server/ai/validate.ts</code><br/>Ownership, criterion links, 100% shares, and objection invariants.</p></div>
+<div class="pointer"><strong>Whole-page language</strong><p><code>src/i18n/copy.ts</code><br/>English/中文 presentation without changing the AI result.</p></div>
+<div class="pointer"><strong>Visual system</strong><p><code>src/styles/tokens.css</code>, <code>landing.css</code>, <code>workspace.css</code><br/>Paper, ink, typography, cards, responsive hierarchy.</p></div>
+<div class="pointer"><strong>Demo warm-up</strong><p><code>scripts/warmDemo.ts</code><br/>Runs real validated inference first; later demo requests may reuse process-memory cache.</p></div>
+</div>
+</section>
+
+<section class="card practice">
+<h2>A practice to reuse</h2>
+<p><strong>Freeze the model's fact contract before you tune the model.</strong> During this build, the product path and model gate once produced different valid proposals even with deterministic sampling. The difference was not temperature: the product prompt had compressed criteria to a different input shape. Aligning both paths to the same canonical <code>id + name + weight</code> contract removed that source of drift. The shipping audit later reinforced the same lesson when the prepared rubric itself had to be corrected to the current official criteria.</p>
+<p>Reusable pattern: <strong>canonical input → structured schema → cross-field validator → observed repeated run</strong>. On another AI product, use the same chain before claiming reproducibility or grounding.</p>
+<details><summary>Evidence anchors</summary><p><code>devpost/checklist.md → Revisions</code> records the prompt-contract correction. <code>server/ai/prompts.ts</code> constructs the canonical request. <code>server/ai/validate.ts</code> rejects outputs that violate product invariants. The build verification observed validated cache reuse; exact proposal numbers are treated as model outputs tied to the current rubric, not hard-coded product facts.</p></details>
+</section>
+
+<section class="card">
+<h2>Run it again</h2>
+<ol>
+<li>Use Node 24 LTS (<code>.nvmrc</code> is included).</li>
+<li>Make sure Ollama is running and the configured Spark model is available.</li>
+<li>From the repo root: <code>npm install</code>, then <code>npm run dev</code>.</li>
+<li>Open <code>http://127.0.0.1:5173</code>.</li>
+<li>For a recording session, keep the server running and execute <code>npm run warm</code> once. Only real validated inference is cached.</li>
+</ol>
+<p>This map is a snapshot of commit <code>a321a20</code>. If later shipping fixes change the flow, refresh this map.</p>
+</section>
+</div>
+</main>
+</body>
+</html>

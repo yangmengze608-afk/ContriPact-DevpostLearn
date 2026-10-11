@@ -1,0 +1,119 @@
+{
+  "model": "contripact-spark-x2.5-4b-q4",
+  "all_passed": true,
+  "tests": [
+    {
+      "test": "rules",
+      "passed": true,
+      "metrics": {
+        "wall_seconds": 13.706,
+        "load_seconds": 0.057,
+        "prompt_tokens": 260,
+        "output_tokens": 247,
+        "generation_seconds": 13.101,
+        "tokens_per_second": 18.85,
+        "done_reason": "stop"
+      },
+      "checks": {
+        "exact_criterion_set": true,
+        "weights_exact": true,
+        "weights_sum_100": true,
+        "no_extra_criteria": true,
+        "quotes_trace_to_brief": true
+      }
+    },
+    {
+      "test": "before",
+      "passed": true,
+      "metrics": {
+        "wall_seconds": 26.605,
+        "load_seconds": 0.096,
+        "prompt_tokens": 425,
+        "output_tokens": 330,
+        "generation_seconds": 25.833,
+        "tokens_per_second": 12.77,
+        "done_reason": "stop"
+      },
+      "checks": {
+        "exact_task_set": true,
+        "criterion_links_valid": true,
+        "has_high_value_work": true,
+        "has_supporting_work": true,
+        "core_build_links_design": true,
+        "model_gate_links_design_or_innovation": true,
+        "demo_video_links_presentation": true,
+        "submission_logistics_supporting": true
+      }
+    },
+    {
+      "test": "contribution",
+      "passed": true,
+      "metrics": {
+        "wall_seconds": 23.045,
+        "load_seconds": 0.028,
+        "prompt_tokens": 590,
+        "output_tokens": 404,
+        "generation_seconds": 21.406,
+        "tokens_per_second": 18.87,
+        "done_reason": "stop"
+      },
+      "checks": {
+        "exact_member_set": true,
+        "evidence_owned_by_member": true,
+        "criterion_links_valid": true,
+        "shares_sum_100": true,
+        "shares_are_differentiated": true,
+        "broad_order_sanity": true,
+        "core_work_links_expected_rubric": true,
+        "demo_work_links_presentation": true
+      }
+    },
+    {
+      "test": "objection",
+      "passed": true,
+      "metrics": {
+        "wall_seconds": 24.038,
+        "prompt_tokens": 2839,
+        "output_tokens": 299,
+        "tokens_per_second": 14.41,
+        "subcalls": [
+          {
+            "wall_seconds": 8.377,
+            "load_seconds": 0.028,
+            "prompt_tokens": 937,
+            "output_tokens": 103,
+            "generation_seconds": 7.027,
+            "tokens_per_second": 14.66,
+            "done_reason": "stop"
+          },
+          {
+            "wall_seconds": 7.646,
+            "load_seconds": 0.047,
+            "prompt_tokens": 957,
+            "output_tokens": 99,
+            "generation_seconds": 6.61,
+            "tokens_per_second": 14.98,
+            "done_reason": "stop"
+          },
+          {
+            "wall_seconds": 8.015,
+            "load_seconds": 0.008,
+            "prompt_tokens": 945,
+            "output_tokens": 97,
+            "generation_seconds": 7.114,
+            "tokens_per_second": 13.64,
+            "done_reason": "stop"
+          }
+        ]
+      },
+      "checks": {
+        "exact_objection_set": true,
+        "evidence_ids_valid": true,
+        "O1_unsupported_clean_keep": true,
+        "O2_recognizes_rubric_and_evidence": true,
+        "O2_already_recognized_keep": true,
+        "O3_unsupported_clean_keep": true
+      }
+    }
+  ]
+}

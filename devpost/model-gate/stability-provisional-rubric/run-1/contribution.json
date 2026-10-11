@@ -1,0 +1,91 @@
+{
+  "test": "contribution",
+  "model": "contripact-spark-x2.5-4b-q4",
+  "passed": true,
+  "checks": {
+    "exact_member_set": true,
+    "evidence_owned_by_member": true,
+    "criterion_links_valid": true,
+    "shares_sum_100": true,
+    "shares_are_differentiated": true,
+    "broad_order_sanity": true,
+    "technical_work_links_technical": true,
+    "demo_work_links_demo": true
+  },
+  "metrics": {
+    "wall_seconds": 16.822,
+    "load_seconds": 0.006,
+    "prompt_tokens": 589,
+    "output_tokens": 399,
+    "generation_seconds": 16.473,
+    "tokens_per_second": 24.22,
+    "done_reason": "stop"
+  },
+  "memory_snapshot": [
+    {
+      "rss_mb": 15.6,
+      "command": "/opt/homebrew/bin/ollama serve"
+    }
+  ],
+  "output": {
+    "members": [
+      {
+        "contribution_relevance": "High",
+        "evidence_ids": [
+          "A1",
+          "A2"
+        ],
+        "linked_criteria": [
+          "Product usefulness",
+          "Technical implementation"
+        ],
+        "member": "A",
+        "reason": "Built core AI adapter and reliable fallback, directly boosting product usefulness and technical reliability.",
+        "suggested_share_percent": 35
+      },
+      {
+        "contribution_relevance": "High",
+        "evidence_ids": [
+          "B1",
+          "B2"
+        ],
+        "linked_criteria": [
+          "Technical implementation",
+          "Product usefulness"
+        ],
+        "member": "B",
+        "reason": "Fixed hallucination and traceable rules, enhancing technical accuracy and product usefulness.",
+        "suggested_share_percent": 25
+      },
+      {
+        "contribution_relevance": "High",
+        "evidence_ids": [
+          "C1",
+          "C2"
+        ],
+        "linked_criteria": [
+          "Product usefulness",
+          "Demo and communication"
+        ],
+        "member": "C",
+        "reason": "Designed clear UI and improved comprehension, boosting product usefulness and demo communication.",
+        "suggested_share_percent": 20
+      },
+      {
+        "contribution_relevance": "High",
+        "evidence_ids": [
+          "D1",
+          "D2"
+        ],
+        "linked_criteria": [
+          "Demo and communication",
+          "Product usefulness"
+        ],
+        "member": "D",
+        "reason": "Edited demo and narrative, ensuring strong communication and final product readiness.",
+        "suggested_share_percent": 20
+      }
+    ],
+    "summary": "Total share: 100%"
+  }
+}

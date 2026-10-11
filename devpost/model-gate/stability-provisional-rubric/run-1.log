@@ -1,0 +1,234 @@
+{
+  "test": "rules",
+  "passed": true,
+  "checks": {
+    "exact_criterion_set": true,
+    "weights_exact": true,
+    "weights_sum_100": true,
+    "no_extra_criteria": true,
+    "quotes_trace_to_brief": true
+  },
+  "metrics": {
+    "wall_seconds": 10.306,
+    "load_seconds": 0.005,
+    "prompt_tokens": 264,
+    "output_tokens": 237,
+    "generation_seconds": 9.927,
+    "tokens_per_second": 23.87,
+    "done_reason": "stop"
+  }
+}
+{
+  "test": "before",
+  "passed": true,
+  "checks": {
+    "exact_task_set": true,
+    "criterion_links_valid": true,
+    "has_high_value_work": true,
+    "has_supporting_work": true,
+    "core_build_links_technical": true,
+    "model_gate_links_technical": true,
+    "demo_video_links_demo": true,
+    "submission_logistics_supporting": true
+  },
+  "metrics": {
+    "wall_seconds": 15.56,
+    "load_seconds": 0.003,
+    "prompt_tokens": 424,
+    "output_tokens": 365,
+    "generation_seconds": 15.274,
+    "tokens_per_second": 23.9,
+    "done_reason": "stop"
+  }
+}
+{
+  "test": "contribution",
+  "passed": true,
+  "checks": {
+    "exact_member_set": true,
+    "evidence_owned_by_member": true,
+    "criterion_links_valid": true,
+    "shares_sum_100": true,
+    "shares_are_differentiated": true,
+    "broad_order_sanity": true,
+    "technical_work_links_technical": true,
+    "demo_work_links_demo": true
+  },
+  "metrics": {
+    "wall_seconds": 16.822,
+    "load_seconds": 0.006,
+    "prompt_tokens": 589,
+    "output_tokens": 399,
+    "generation_seconds": 16.473,
+    "tokens_per_second": 24.22,
+    "done_reason": "stop"
+  }
+}
+{
+  "test": "objection",
+  "passed": true,
+  "checks": {
+    "exact_objection_set": true,
+    "evidence_ids_valid": true,
+    "O1_unsupported_clean_keep": true,
+    "O2_recognizes_rubric_and_evidence": true,
+    "O2_already_recognized_keep": true,
+    "O3_unsupported_clean_keep": true
+  },
+  "metrics": {
+    "wall_seconds": 15.024,
+    "prompt_tokens": 2826,
+    "output_tokens": 295,
+    "tokens_per_second": 21.54,
+    "subcalls": [
+      {
+        "wall_seconds": 4.426,
+        "load_seconds": 0.005,
+        "prompt_tokens": 931,
+        "output_tokens": 96,
+        "generation_seconds": 3.975,
+        "tokens_per_second": 24.15,
+        "done_reason": "stop"
+      },
+      {
+        "wall_seconds": 5.779,
+        "load_seconds": 0.007,
+        "prompt_tokens": 956,
+        "output_tokens": 103,
+        "generation_seconds": 5.342,
+        "tokens_per_second": 19.28,
+        "done_reason": "stop"
+      },
+      {
+        "wall_seconds": 4.819,
+        "load_seconds": 0.006,
+        "prompt_tokens": 939,
+        "output_tokens": 96,
+        "generation_seconds": 4.381,
+        "tokens_per_second": 21.91,
+        "done_reason": "stop"
+      }
+    ]
+  }
+}
+
+=== GATE SUMMARY ===
+{
+  "model": "contripact-spark-x2.5-4b-q4",
+  "all_passed": true,
+  "tests": [
+    {
+      "test": "rules",
+      "passed": true,
+      "metrics": {
+        "wall_seconds": 10.306,
+        "load_seconds": 0.005,
+        "prompt_tokens": 264,
+        "output_tokens": 237,
+        "generation_seconds": 9.927,
+        "tokens_per_second": 23.87,
+        "done_reason": "stop"
+      },
+      "checks": {
+        "exact_criterion_set": true,
+        "weights_exact": true,
+        "weights_sum_100": true,
+        "no_extra_criteria": true,
+        "quotes_trace_to_brief": true
+      }
+    },
+    {
+      "test": "before",
+      "passed": true,
+      "metrics": {
+        "wall_seconds": 15.56,
+        "load_seconds": 0.003,
+        "prompt_tokens": 424,
+        "output_tokens": 365,
+        "generation_seconds": 15.274,
+        "tokens_per_second": 23.9,
+        "done_reason": "stop"
+      },
+      "checks": {
+        "exact_task_set": true,
+        "criterion_links_valid": true,
+        "has_high_value_work": true,
+        "has_supporting_work": true,
+        "core_build_links_technical": true,
+        "model_gate_links_technical": true,
+        "demo_video_links_demo": true,
+        "submission_logistics_supporting": true
+      }
+    },
+    {
+      "test": "contribution",
+      "passed": true,
+      "metrics": {
+        "wall_seconds": 16.822,
+        "load_seconds": 0.006,
+        "prompt_tokens": 589,
+        "output_tokens": 399,
+        "generation_seconds": 16.473,
+        "tokens_per_second": 24.22,
+        "done_reason": "stop"
+      },
+      "checks": {
+        "exact_member_set": true,
+        "evidence_owned_by_member": true,
+        "criterion_links_valid": true,
+        "shares_sum_100": true,
+        "shares_are_differentiated": true,
+        "broad_order_sanity": true,
+        "technical_work_links_technical": true,
+        "demo_work_links_demo": true
+      }
+    },
+    {
+      "test": "objection",
+      "passed": true,
+      "metrics": {
+        "wall_seconds": 15.024,
+        "prompt_tokens": 2826,
+        "output_tokens": 295,
+        "tokens_per_second": 21.54,
+        "subcalls": [
+          {
+            "wall_seconds": 4.426,
+            "load_seconds": 0.005,
+            "prompt_tokens": 931,
+            "output_tokens": 96,
+            "generation_seconds": 3.975,
+            "tokens_per_second": 24.15,
+            "done_reason": "stop"
+          },
+          {
+            "wall_seconds": 5.779,
+            "load_seconds": 0.007,
+            "prompt_tokens": 956,
+            "output_tokens": 103,
+            "generation_seconds": 5.342,
+            "tokens_per_second": 19.28,
+            "done_reason": "stop"
+          },
+          {
+            "wall_seconds": 4.819,
+            "load_seconds": 0.006,
+            "prompt_tokens": 939,
+            "output_tokens": 96,
+            "generation_seconds": 4.381,
+            "tokens_per_second": 21.91,
+            "done_reason": "stop"
+          }
+        ]
+      },
+      "checks": {
+        "exact_objection_set": true,
+        "evidence_ids_valid": true,
+        "O1_unsupported_clean_keep": true,
+        "O2_recognizes_rubric_and_evidence": true,
+        "O2_already_recognized_keep": true,
+        "O3_unsupported_clean_keep": true
+      }
+    }
+  ]
+}

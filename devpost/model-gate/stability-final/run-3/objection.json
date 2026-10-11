@@ -1,0 +1,86 @@
+{
+  "test": "objection",
+  "model": "contripact-spark-x2.5-4b-q4",
+  "passed": true,
+  "checks": {
+    "exact_objection_set": true,
+    "evidence_ids_valid": true,
+    "O1_unsupported_clean_keep": true,
+    "O2_recognizes_rubric_and_evidence": true,
+    "O2_already_recognized_keep": true,
+    "O3_unsupported_clean_keep": true
+  },
+  "metrics": {
+    "wall_seconds": 30.581,
+    "prompt_tokens": 2839,
+    "output_tokens": 299,
+    "tokens_per_second": 11.38,
+    "subcalls": [
+      {
+        "wall_seconds": 9.885,
+        "load_seconds": 0.044,
+        "prompt_tokens": 937,
+        "output_tokens": 103,
+        "generation_seconds": 7.825,
+        "tokens_per_second": 13.16,
+        "done_reason": "stop"
+      },
+      {
+        "wall_seconds": 10.136,
+        "load_seconds": 0.01,
+        "prompt_tokens": 957,
+        "output_tokens": 99,
+        "generation_seconds": 8.696,
+        "tokens_per_second": 11.39,
+        "done_reason": "stop"
+      },
+      {
+        "wall_seconds": 10.56,
+        "load_seconds": 0.019,
+        "prompt_tokens": 945,
+        "output_tokens": 97,
+        "generation_seconds": 9.76,
+        "tokens_per_second": 9.94,
+        "done_reason": "stop"
+      }
+    ]
+  },
+  "memory_snapshot": [
+    {
+      "rss_mb": 12.6
+    }
+  ],
+  "output": {
+    "checks": [
+      {
+        "changes_contribution_assessment": false,
+        "evidence_ids": [],
+        "objection_id": "O1",
+        "reason": "O1 relies on personal fatigue, which is not a competition criterion. It is unsupported by any evidence.",
+        "recommendation_action": "keep",
+        "rule_connection": "NONE",
+        "support": "unsupported"
+      },
+      {
+        "changes_contribution_assessment": false,
+        "evidence_ids": [
+          "D1"
+        ],
+        "objection_id": "O2",
+        "reason": "Objection correctly links D1 to Presentation, supporting the current assessment.",
+        "recommendation_action": "keep",
+        "rule_connection": "Presentation",
+        "support": "supported"
+      },
+      {
+        "changes_contribution_assessment": false,
+        "evidence_ids": [],
+        "objection_id": "O3",
+        "reason": "Competition rules and evidence do not support relying on informal leadership for contribution relevance.",
+        "recommendation_action": "keep",
+        "rule_connection": "NONE",
+        "support": "unsupported"
+      }
+    ]
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "test": "contribution",
+  "model": "contripact-spark-x2.5-4b-q4",
+  "passed": true,
+  "checks": {
+    "exact_member_set": true,
+    "evidence_owned_by_member": true,
+    "criterion_links_valid": true,
+    "shares_sum_100": true,
+    "shares_are_differentiated": true,
+    "broad_order_sanity": true,
+    "core_work_links_expected_rubric": true,
+    "demo_work_links_presentation": true
+  },
+  "metrics": {
+    "wall_seconds": 60.954,
+    "load_seconds": 0.363,
+    "prompt_tokens": 590,
+    "output_tokens": 404,
+    "generation_seconds": 33.62,
+    "tokens_per_second": 12.02,
+    "done_reason": "stop"
+  },
+  "memory_snapshot": [
+    {
+      "rss_mb": 10.8
+    }
+  ],
+  "output": {
+    "members": [
+      {
+        "contribution_relevance": "High",
+        "evidence_ids": [
+          "B1",
+          "B2"
+        ],
+        "linked_criteria": [
+          "Design",
+          "Potential Impact"
+        ],
+        "member": "B",
+        "reason": "B1 and B2 directly address Design and Potential Impact, ensuring traceable, accurate judging.",
+        "suggested_share_percent": 35
+      },
+      {
+        "contribution_relevance": "High",
+        "evidence_ids": [
+          "A1",
+          "A2"
+        ],
+        "linked_criteria": [
+          "Design",
+          "Potential Impact"
+        ],
+        "member": "A",
+        "reason": "A1 and A2 cover Design and Potential Impact with robust, reliable AI flow implementation.",
+        "suggested_share_percent": 30
+      },
+      {
+        "contribution_relevance": "Medium",
+        "evidence_ids": [
+          "C1",
+          "C2"
+        ],
+        "linked_criteria": [
+          "Design",
+          "Presentation"
+        ],
+        "member": "C",
+        "reason": "C1 and C2 focus on Design and Presentation, enhancing visual clarity and comprehension.",
+        "suggested_share_percent": 20
+      },
+      {
+        "contribution_relevance": "Supporting",
+        "evidence_ids": [
+          "D1",
+          "D2"
+        ],
+        "linked_criteria": [
+          "Presentation"
+        ],
+        "member": "D",
+        "reason": "D1 and D2 support Presentation by finalizing narrative and ensuring timely submission.",
+        "suggested_share_percent": 15
+      }
+    ],
+    "summary": "Total share: 100%"
+  }
+}

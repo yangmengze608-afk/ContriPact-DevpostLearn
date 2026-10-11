@@ -1,0 +1,51 @@
+export const demoCase = {
+  id: 'build-with-ai-demo-01',
+  version: '1.1.0',
+  title: 'Build With AI — Four-person competition team',
+  prizePoolCny: 12000,
+  competitionBrief:
+    'Build With AI: Basics uses four equally weighted judging criteria: Design (25%): the project should feel complete and coherent as a product experience; Potential Impact (25%): it should make a credible case for solving a real problem for a real audience; Innovation/Idea (25%): it should show a creative, differentiated approach; Presentation (25%): the demo should show the project working end to end and clearly communicate the problem, audience, and value. The four criteria are equally weighted.',
+  expectedCriteria: [
+    { id: 'design', name: 'Design', weight: 25 },
+    { id: 'impact', name: 'Potential Impact', weight: 25 },
+    { id: 'innovation', name: 'Innovation/Idea', weight: 25 },
+    { id: 'presentation', name: 'Presentation', weight: 25 },
+  ],
+  plannedTasks: [
+    { id: 'T1', owner: 'A', task: 'Build the end-to-end Before/After workspace and provider adapter.' },
+    { id: 'T2', owner: 'B', task: 'Build the automated model-evaluation harness, structured-output validators, and evidence-grounding checks.' },
+    { id: 'T3', owner: 'C', task: 'Design the bilingual ink-wash landing page and make rule/evidence links easy to inspect.' },
+    { id: 'T4', owner: 'D', task: 'Create the final demo video, narrative, and submission package.' },
+    { id: 'T5', owner: 'D', task: 'Coordinate final asset collection, deadline checks, and submission logistics.' },
+  ],
+  actualContributions: [
+    { member: 'A', evidence: [
+      { id: 'A1', text: 'Implemented the complete Before/After React flow and the local/cloud AI provider adapter.' },
+      { id: 'A2', text: 'Added analysis-unavailable fallback so the app never substitutes fake AI output when inference fails.' },
+    ]},
+    { member: 'B', evidence: [
+      { id: 'B1', text: 'Built Rules/Contribution/Objection model tests and found an early hallucination where the model invented a judging criterion.' },
+      { id: 'B2', text: 'Reworked prompts and evidence IDs so every contribution judgment can be traced back to visible rules and evidence.' },
+    ]},
+    { member: 'C', evidence: [
+      { id: 'C1', text: 'Designed the bilingual commercial landing page and the workspace hierarchy linking rules, contribution value, and recommendation.' },
+      { id: 'C2', text: 'Improved labels and evidence cards after a quick comprehension review so a reviewer can understand the core value in about one minute.' },
+    ]},
+    { member: 'D', evidence: [
+      { id: 'D1', text: 'Edited the final demo video and wrote the submission narrative explaining the problem and the Before/After flow.' },
+      { id: 'D2', text: 'Coordinated final asset collection and uploaded the submission before the deadline.' },
+    ]},
+  ],
+  objections: [
+    { id: 'O1', member: 'D', text: 'I stayed awake all night, so I deserve 30% regardless of the judging criteria.' },
+    { id: 'O2', member: 'D', text: 'My demo video is directly tied to the Presentation criterion, and D1 shows I produced that artifact. If the current assessment treats my work as merely administrative, it underweights a scored criterion.' },
+    { id: 'O3', member: 'C', text: 'I was the informal team leader, so I should receive more even if that title is not part of the competition rules or contribution evidence.' },
+  ],
+} as const;
+
+export type DemoCase = typeof demoCase;
+export type CriterionName = DemoCase['expectedCriteria'][number]['name'];
+export type PlannedTaskId = DemoCase['plannedTasks'][number]['id'];
+export type MemberId = DemoCase['actualContributions'][number]['member'];
+export type EvidenceId = DemoCase['actualContributions'][number]['evidence'][number]['id'];
+export type ObjectionId = DemoCase['objections'][number]['id'];

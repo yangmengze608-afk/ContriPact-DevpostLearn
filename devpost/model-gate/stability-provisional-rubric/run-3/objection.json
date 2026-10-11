@@ -1,0 +1,87 @@
+{
+  "test": "objection",
+  "model": "contripact-spark-x2.5-4b-q4",
+  "passed": true,
+  "checks": {
+    "exact_objection_set": true,
+    "evidence_ids_valid": true,
+    "O1_unsupported_clean_keep": true,
+    "O2_recognizes_rubric_and_evidence": true,
+    "O2_already_recognized_keep": true,
+    "O3_unsupported_clean_keep": true
+  },
+  "metrics": {
+    "wall_seconds": 14.707,
+    "prompt_tokens": 2826,
+    "output_tokens": 295,
+    "tokens_per_second": 22.71,
+    "subcalls": [
+      {
+        "wall_seconds": 4.737,
+        "load_seconds": 0.003,
+        "prompt_tokens": 931,
+        "output_tokens": 96,
+        "generation_seconds": 4.124,
+        "tokens_per_second": 23.28,
+        "done_reason": "stop"
+      },
+      {
+        "wall_seconds": 5.132,
+        "load_seconds": 0.011,
+        "prompt_tokens": 956,
+        "output_tokens": 103,
+        "generation_seconds": 4.602,
+        "tokens_per_second": 22.38,
+        "done_reason": "stop"
+      },
+      {
+        "wall_seconds": 4.838,
+        "load_seconds": 0.004,
+        "prompt_tokens": 939,
+        "output_tokens": 96,
+        "generation_seconds": 4.262,
+        "tokens_per_second": 22.53,
+        "done_reason": "stop"
+      }
+    ]
+  },
+  "memory_snapshot": [
+    {
+      "rss_mb": 21.4,
+      "command": "/opt/homebrew/bin/ollama serve"
+    }
+  ],
+  "output": {
+    "checks": [
+      {
+        "changes_contribution_assessment": false,
+        "evidence_ids": [],
+        "objection_id": "O1",
+        "reason": "No evidence links to judging criteria; effort alone does not justify a share.",
+        "recommendation_action": "keep",
+        "rule_connection": "NONE",
+        "support": "unsupported"
+      },
+      {
+        "changes_contribution_assessment": false,
+        "evidence_ids": [
+          "D1"
+        ],
+        "objection_id": "O2",
+        "reason": "D1 explicitly shows D produced the demo video, directly supporting the Demo and communication criterion.",
+        "recommendation_action": "keep",
+        "rule_connection": "Demo and communication",
+        "support": "supported"
+      },
+      {
+        "changes_contribution_assessment": false,
+        "evidence_ids": [],
+        "objection_id": "O3",
+        "reason": "Competition rules and evidence do not support leadership title as a contribution factor.",
+        "recommendation_action": "keep",
+        "rule_connection": "NONE",
+        "support": "unsupported"
+      }
+    ]
+  }
+}
