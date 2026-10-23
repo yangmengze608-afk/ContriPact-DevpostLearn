@@ -23,3 +23,5 @@ No new learner hands-on checkpoint/reflection is claimed. No payment or fairness
 The final H.264/AAC MP4 is 1440×1100, 142.08 seconds (1–3 minute requirement met). Sampled frames at 20, 52, 63, 90, 104 and 116 seconds show actual states and document transitions; narration segments were checked for duration and non-overlap. The raw browser recording and downloaded JSON remain local. Only trailing idle time was trimmed; no operation was fabricated.
 
 GitHub Pages deployed at https://yangmengze608-afk.github.io/ContriPact-DevpostLearn/ . Live browser smoke passed: initial calculation, input edit/stale export, recalculation with +16.67 change, and actual JSON download.
+
+YouTube Studio confirmed public publication at https://youtu.be/_Ow5PWbKkls on 2026-10-23; its copyright check reported no issues. Public-repository HTML and all three root planning files were fetched without authentication (HTTP 200 with substantive contents).

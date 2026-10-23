@@ -32,7 +32,9 @@ React, TypeScript, Vite, Node.js test runner, Codex, Devpost Learn Skill Pack.
 https://github.com/yangmengze608-afk/ContriPact-DevpostLearn
 
 ## Demo video
-[Replace only after a publicly visible YouTube/Vimeo upload is verified. A local MP4 or GitHub release is not a substitute under the official rules.]
+https://youtu.be/_Ow5PWbKkls
+
+YouTube Studio confirmed published on October 23, 2026. Public visibility selected; no copyright issues reported. Local duration 142.08 seconds, YouTube display 2:23.
 
 ## Personal/legal fields
 Age of majority, eligibility/residency exclusions, resource attendance, learner experience and exit survey must be truthful and personally confirmed. Do not infer them from an account profile or earlier unverified notes. Final submission accepts the official rules; if a required declaration cannot be verified, the user must perform it.

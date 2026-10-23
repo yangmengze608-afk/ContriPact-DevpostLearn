@@ -71,7 +71,8 @@ A captain assigns the scores; the tool cannot evaluate contribution evidence, se
 
 - Repository: https://github.com/yangmengze608-afk/ContriPact-DevpostLearn
 - Live demo: https://yangmengze608-afk.github.io/ContriPact-DevpostLearn/ (calculation → edit → recalculate → JSON checked in a browser).
-- Current operation video: [2m22s actual browser demo with English synthetic narration](https://github.com/yangmengze608-afk/ContriPact-DevpostLearn/releases/tag/transparent-split-v1). This release download is a backup; a publicly visible YouTube/Vimeo link is still required by the competition and is not yet verified.
+- Final demo video: https://youtu.be/_Ow5PWbKkls — public YouTube publication confirmed; 142.08 seconds locally, displayed as 2:23 by YouTube. Actual browser actions with disclosed English synthetic narration.
+- [Backup MP4 download](https://github.com/yangmengze608-afk/ContriPact-DevpostLearn/releases/tag/transparent-split-v1).
 - Devpost: not submitted. See the local current status for remaining blockers.
 
 MIT license. Historical AI modules retain their prior dependencies in the lockfile to preserve the existing project; the default browser bundle does not import them.
