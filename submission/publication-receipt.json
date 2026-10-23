@@ -8,5 +8,12 @@
   "youtubeDisplayedDuration": "2:23",
   "backupVideo": "https://github.com/yangmengze608-afk/ContriPact-DevpostLearn/releases/tag/transparent-split-v1",
   "devpostSubmitted": false,
-  "devpostBlocker": "Create project triggers reCAPTCHA Timeout; no project draft or submission receipt yet"
+  "devpostBlocker": "Create project produces reCAPTCHA Timeout; user independently retried and confirmed still unable to enter. No draft or submission.",
+  "publicVideoPlaybackVerification": {
+    "signedOut": true,
+    "title": "ContriPact \u2014 Transparent Prize Split | Build With AI: Basics",
+    "mediaDurationSeconds": 142.161,
+    "mediaReadyState": 4,
+    "playingObserved": true
+  }
 }

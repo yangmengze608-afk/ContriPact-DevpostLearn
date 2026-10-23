@@ -25,3 +25,5 @@ The final H.264/AAC MP4 is 1440×1100, 142.08 seconds (1–3 minute requirement 
 GitHub Pages deployed at https://yangmengze608-afk.github.io/ContriPact-DevpostLearn/ . Live browser smoke passed: initial calculation, input edit/stale export, recalculation with +16.67 change, and actual JSON download.
 
 YouTube Studio confirmed public publication at https://youtu.be/_Ow5PWbKkls on 2026-10-23; its copyright check reported no issues. Public-repository HTML and all three root planning files were fetched without authentication (HTTP 200 with substantive contents).
+
+Public YouTube playback was verified in a separate signed-out browser: correct title, media duration 142.161 seconds, readyState 4, playing observed. The user separately retried Devpost creation and confirmed it still times out; there is no Devpost draft or submission receipt.
