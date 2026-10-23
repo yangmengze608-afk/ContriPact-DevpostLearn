@@ -1,0 +1,21 @@
+{
+  "local_independent": {
+    "blobs_scanned": 145,
+    "findings": []
+  },
+  "public_independent": {
+    "blobs_scanned": 89,
+    "findings": []
+  },
+  "main_private_source_exact_hash_overlap": {
+    "count": 0,
+    "independent_paths": [],
+    "limit": "Exact matching blobs only; not proof against partial reuse or historical copying."
+  },
+  "publication_worktree": {
+    "files_checked": 101,
+    "findings": [],
+    "excluded": "Local learner profile, untracked old recordings, local credentials, local Git history and machine paths are not copied."
+  },
+  "commit_metadata": "Existing public author identity is retained. New commits use a GitHub noreply identity; local commit history is not imported."
+}

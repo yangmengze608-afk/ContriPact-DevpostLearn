@@ -1,125 +1,77 @@
-# ContriPact — Build With AI POC
+# ContriPact — Transparent Prize Split
 
-**Reward contribution. Protect the team.**
+A single-device proof of concept for a small competition team's captain: enter a prize, names and contribution scores; inspect a deterministic split; change a score and compare amounts; export a reproducible JSON calculation.
 
-ContriPact is a small AI-assisted contribution-governance proof of concept for competition teams. It does **not** claim that AI can discover an objectively fair split. Instead, it makes one narrow loop inspectable:
+**Transparency does not prove scores are objective or guarantee fairness.** This is not a payment system or a team agreement.
 
-**competition rules → contribution relevance → reward proposal → contestable objection → team agreement**
+## Run from a fresh clone
 
-This repository is an independently built competition POC. It uses one prepared four-person case and a ¥12,000 prize pool so the reasoning path can be demonstrated clearly without adding authentication, a production database, or document ingestion.
-
-## What the demo proves
-
-- **Before Project:** extract judging criteria and map planned tasks to the criteria they are expected to influence. No money split appears before work exists.
-- **After Project:** show raw contribution evidence separately from AI interpretation, then produce a traceable reward proposal.
-- **Reason check:** a member can challenge the proposal. The AI must connect the objection to a visible judging criterion and evidence, or explicitly say that no such connection exists.
-- **Human authority:** the closing state distinguishes **AI recommended** from **team accepted**.
-
-`High / Medium / Supporting` labels describe the competitive relevance of a **task or contribution bundle**, never the worth of a person.
-
-## Stack
-
-- React 19 + TypeScript + Vite 8
-- Express 5 + Zod 4
-- Ollama local API
-- Spark-X2.5-4B Q4_K_M behind a provider boundary
-- Process-memory cache for **successfully validated** AI results only
-
-The browser never talks directly to Ollama. Vite proxies `/api/*` to the local Express analysis boundary, where structured model output is validated before React can display it.
-
-## Requirements
-
-- **Node.js 24 LTS** (`.nvmrc` is included)
-- npm
-- Ollama >= 0.34.1
-- Spark-X2.5-4B Q4_K_M available in Ollama under the default alias:
-
-```text
-contripact-spark-x2.5-4b-q4
-```
-
-The model artifact used during development came from the official model repository:
-
-```text
-https://huggingface.co/XHToken/Spark-X2.5-4B-GGUF
-```
-
-This repository does not contain the GGUF model binary or any machine-specific model path. If you create the Ollama alias manually, point a local Modelfile at **your own** downloaded GGUF path, then run:
+Requires Node.js **24.x** and npm. No API keys, backend or model installation.
 
 ```bash
-ollama create contripact-spark-x2.5-4b-q4 -f Modelfile
-```
-
-## Run locally
-
-```bash
-npm install
+git clone https://github.com/yangmengze608-afk/ContriPact-DevpostLearn.git
+cd ContriPact-DevpostLearn
+npm ci
 npm run dev
 ```
 
-Open:
-
-```text
-http://127.0.0.1:5173
-```
-
-The Express API runs on `http://127.0.0.1:8787` by default.
-
-Optional environment variables are documented in `.env.example`.
-
-## Warm the real AI path before recording
-
-For a smooth short demo, keep the same server process running and execute:
+Open http://127.0.0.1:5173 . The default entry is the current deterministic calculator.
 
 ```bash
-npm run warm
+npm test
+npm run build
+npm run preview -- --host 127.0.0.1
 ```
 
-This performs the real **Rules → Before → After → prepared O2 objection** path. Only validated successful results enter the in-memory cache. If the cache is cold, these are real model calls; if it is already warm, the script reports cache hits.
+Preview opens http://127.0.0.1:4173 . The static build is `dist/`; the relative Vite base supports GitHub Pages repository paths.
 
-To deliberately bypass the cache during development:
+## Try the core loop
+
+1. Calculate the fictional CNY 100.00 example with Alex, Blair and Casey, each scoring 1. The payouts are 33.34, 33.33 and 33.33.
+2. Change Blair's score to 2. The result is marked stale and export is disabled.
+3. Recalculate: 25.00, 50.00 and 25.00, with previous amounts and signed changes.
+4. Open the rounding audit, then download `contripact-allocation.json`. It includes original inputs, the rule, current results and the preceding calculation.
+
+## Exact-cent calculation
+
+Prize: CNY 0.01–1,000,000.00, at most two decimal places. Members: 1–20; unique trimmed names of 1–60 characters; integer scores 0–1,000,000; positive total score.
+
+Use integer cents and BigInt products. Floor `prizeCents × score / totalScore`, then distribute remaining cents by largest remainder; ties follow member list order. Zero-score members get zero. The sum of payouts equals the prize exactly. Displayed percentages are approximate; score fractions and integer cents are authoritative.
+
+## Current planning documents
+
+- [scope.md](scope.md): user, problem, kernel and exclusions.
+- [prd.md](prd.md): interaction, validation, stale results and acceptance.
+- [spec.md](spec.md): state, arithmetic, export schema, startup and tests.
+- [Current process record](devpost/current-process.md): actual Skill Pack usage and revision boundaries.
+- [Verification](submission/VERIFICATION.md): executed checks and limits.
+- [Submission package](submission/SUBMISSION.md): English draft fields and remaining personal requirements.
+
+## Actual use of the official Devpost Learn Skill Pack
+
+The installed pack is from [challengepost/learn-ai-basics](https://github.com/challengepost/learn-ai-basics), using:
 
 ```bash
-npm run warm -- --force
+npx skills add challengepost/learn-ai-basics --all -y
 ```
 
-Server restart clears the cache. There is no disk-persisted or seeded “successful AI result” fallback.
+Codex read the installed six `SKILL.md` files, planning templates and relevant references. `1-start` resumed from existing project artifacts. `2-scope`, `3-prd` and `4-spec` were reopened for the user's explicit October 23 scope, producing the three current root documents before implementing the calculator. `5-build` implemented and tested the complete calculation → comparison → export slice. `6-ship` drives the public-file/history audit, reproduction, demo and submission checklist.
 
-## Demo path
+The user supplied the product answers and authorized autonomous low-risk implementation. This revision did not conduct new interviews, a new learner hands-on review, or a new learning reflection, and does not claim to have done so. It follows the six-step structure with these disclosed deviations from the pack's interactive curriculum. The pack's source and hashes are recorded in `skills-lock.json`.
 
-1. Enter the prepared case.
-2. Run **Before Project** analysis and inspect the rules-to-task map.
-3. Mark the map as the team's planning reference.
-4. Switch to **After Project** and inspect raw A1–D2 evidence.
-5. Run the contribution analysis and see the validated ¥12,000 proposal.
-6. Check the prepared O2 objection: the point is supported by `Presentation` + `D1`, but the proposal stays because the current After assessment already recognized that contribution.
-7. The team accepts the current proposal.
+## Project provenance and previous iteration
 
-The UI is English-first and can switch to Chinese without creating a second project state or re-running the AI.
+This competition-specific workspace was initialized on October 7, 2026. An earlier independent AI/Ollama prototype and its `devpost/` plans remain as historical work from the same submission period. They are **not** the current active flow or current feature claims; consult the root documents. Existing public Git history is preserved; the October 23 release is added without force-pushing or importing any main private-repository history. The product idea predates this competition; the private main ContriPact source, data and credentials are not dependencies or part of the current new implementation. Historical absence of source copying cannot be established solely by a current automated scan.
 
-## Failure behavior
+## Limitations
 
-If Ollama is stopped, the model alias is missing, the call times out, or structured output fails validation:
+A captain assigns the scores; the tool cannot evaluate contribution evidence, secure team consent, establish fairness or execute payment. Data lives only in browser memory and disappears on reload. JSON is an unsigned calculation record. No login, database, sync, scoring AI or runtime external API.
 
-- original rules/evidence stay visible;
-- the affected AI result is cleared;
-- the UI shows **Analysis unavailable** and a retry action;
-- no seeded or prewritten AI-looking result is substituted.
+## Demo and shipping status
 
-## Validation evidence
+- Repository: https://github.com/yangmengze608-afk/ContriPact-DevpostLearn
+- Live demo: https://yangmengze608-afk.github.io/ContriPact-DevpostLearn/ (calculation → edit → recalculate → JSON checked in a browser).
+- Current operation video: [2m22s actual browser demo with English synthetic narration](https://github.com/yangmengze608-afk/ContriPact-DevpostLearn/releases/tag/transparent-split-v1). This release download is a backup; a publicly visible YouTube/Vimeo link is still required by the competition and is not yet verified.
+- Devpost: not submitted. See the local current status for remaining blockers.
 
-The product contract uses `num_ctx=8192`, `think=false`, `temperature=0`, `seed=42`, and schema-constrained output. The build checks exact rubric extraction, evidence ownership, criterion links, 100% share totals, and objection cross-field consistency before results can be displayed.
-
-After the shipping rubric correction, Spark completed **3/3 full repeated post-correction gates** against the official four-item equal-weight case. Rules, Before, After, and Objection structured outputs were exactly identical across all three runs. The stable proposal was **B 35% / A 30% / C 20% / D 15%**, and prepared O2 consistently returned `Presentation` + `D1`, `supported`, `changes=false`, `keep`.
-
-A clean product server was then warmed through the real API path: the first Rules → Before → After → O2 pass used live inference, and the second identical pass hit validated in-memory cache at all four stages. Cold local inference latency varied substantially, so the cache is used for demo smoothness—not as a fake result fallback.
-
-See `devpost/model-gate/GATE_REPORT.md` and `devpost/model-gate/stability-final/stability-summary.json` for the current evidence. The older `stability-provisional-rubric/` runs are historical only. This fixed POC is not a claim that a 4B model is ready to adjudicate arbitrary real-world compensation disputes.
-
-## Build With AI: Basics submission facts
-
-For the current hackathon, the technical delivery package requires a **1–3 minute demo video** that visibly shows the proof of concept working and a **public source repository URL**. The submission also asks for a short learner-written description and required form questions. This repository contains the planning artifacts (`scope.md`, `prd.md`, `spec.md`) required to demonstrate use of the Devpost Learn skill pack.
-
-## Project boundary
-
-Deliberately not included in this POC: authentication, production persistence, live team invitations, real-time collaboration, arbitrary document upload/OCR, continuous contribution tracking, multiple dispute rounds, or a claim of AI-determined fairness.
+MIT license. Historical AI modules retain their prior dependencies in the lockfile to preserve the existing project; the default browser bundle does not import them.

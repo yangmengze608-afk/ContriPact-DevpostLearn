@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "currency": "CNY",
+  "rule": {
+    "method": "largest-remainder",
+    "formula": "prizeCents * score / totalScore; floor, then distribute remaining cents by remainder descending",
+    "tieBreak": "member-list-order"
+  },
+  "limitation": "This tool makes rules and calculations transparent. It does not prove scores are objective or guarantee a fair allocation.",
+  "current": {
+    "inputs": {
+      "prize": "100.00",
+      "members": [
+        {
+          "id": "member-1",
+          "name": "Alex",
+          "score": "1"
+        },
+        {
+          "id": "member-2",
+          "name": "Blair",
+          "score": "2"
+        },
+        {
+          "id": "member-3",
+          "name": "Casey",
+          "score": "1"
+        }
+      ]
+    },
+    "result": {
+      "prizeCents": 10000,
+      "totalScore": 4,
+      "members": [
+        {
+          "id": "member-1",
+          "name": "Alex",
+          "score": 1,
+          "baseCents": 2500,
+          "remainderNumerator": 0,
+          "extraCent": 0,
+          "amountCents": 2500
+        },
+        {
+          "id": "member-2",
+          "name": "Blair",
+          "score": 2,
+          "baseCents": 5000,
+          "remainderNumerator": 0,
+          "extraCent": 0,
+          "amountCents": 5000
+        },
+        {
+          "id": "member-3",
+          "name": "Casey",
+          "score": 1,
+          "baseCents": 2500,
+          "remainderNumerator": 0,
+          "extraCent": 0,
+          "amountCents": 2500
+        }
+      ]
+    }
+  },
+  "previous": {
+    "inputs": {
+      "prize": "100.00",
+      "members": [
+        {
+          "id": "member-1",
+          "name": "Alex",
+          "score": "1"
+        },
+        {
+          "id": "member-2",
+          "name": "Blair",
+          "score": "1"
+        },
+        {
+          "id": "member-3",
+          "name": "Casey",
+          "score": "1"
+        }
+      ]
+    },
+    "result": {
+      "prizeCents": 10000,
+      "totalScore": 3,
+      "members": [
+        {
+          "id": "member-1",
+          "name": "Alex",
+          "score": 1,
+          "baseCents": 3333,
+          "remainderNumerator": 1,
+          "extraCent": 1,
+          "amountCents": 3334
+        },
+        {
+          "id": "member-2",
+          "name": "Blair",
+          "score": 1,
+          "baseCents": 3333,
+          "remainderNumerator": 1,
+          "extraCent": 0,
+          "amountCents": 3333
+        },
+        {
+          "id": "member-3",
+          "name": "Casey",
+          "score": 1,
+          "baseCents": 3333,
+          "remainderNumerator": 1,
+          "extraCent": 0,
+          "amountCents": 3333
+        }
+      ]
+    }
+  }
+}
