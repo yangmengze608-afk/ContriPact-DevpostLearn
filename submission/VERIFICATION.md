@@ -27,3 +27,12 @@ GitHub Pages deployed at https://yangmengze608-afk.github.io/ContriPact-DevpostL
 YouTube Studio confirmed public publication at https://youtu.be/_Ow5PWbKkls on 2026-10-23; its copyright check reported no issues. Public-repository HTML and all three root planning files were fetched without authentication (HTTP 200 with substantive contents).
 
 Public YouTube playback was verified in a separate signed-out browser: correct title, media duration 142.161 seconds, readyState 4, playing observed. The user separately retried Devpost creation and confirmed it still times out; there is no Devpost draft or submission receipt.
+
+## Final published clone reproduction
+After publication, a second fresh clone was fast-forwarded to public source commit `345b0c7e33882e9b8d3f4a9e0eb185ce77bdc7c4` with no source overlay. Node 24.18.0: `npm ci`, `npm test` (7/7), `npm run build`, `npm run dev -- --port 5174` passed. An actual browser repeated calculate → edit → stale export guard → recalculate → download; downloaded current amounts were 2500/5000/2500 cents. See final-clean-repro.json.
+
+## Formal Devpost submission — October 24, 2026
+The previous project-creation timeout was resolved by the user. Draft 1258649 progressed through all required fields. The technology-requirement answer was shortened to 238 characters after the server revealed a 255-character limit; Additional info saved successfully (4/5). The user supplied all required personal answers and explicitly authorized final legal acceptance and submission. The platform then displayed “Project submitted!” and the public project page showed “SUBMITTED TO — Build With AI: Basics”. The saved video iframe points to `_Ow5PWbKkls`. Evidence: publication-receipt.json and devpost-submitted-20261024.jpg.
+
+Project: https://devpost.com/software/contripact-transparent-prize-split
+No new source-code changes or test reruns were needed for this form-only completion. Submission is verified; no award or eligibility adjudication is implied.

@@ -73,6 +73,6 @@ A captain assigns the scores; the tool cannot evaluate contribution evidence, se
 - Live demo: https://yangmengze608-afk.github.io/ContriPact-DevpostLearn/ (calculation → edit → recalculate → JSON checked in a browser).
 - Final demo video: https://youtu.be/_Ow5PWbKkls — public YouTube publication confirmed; 142.08 seconds locally, displayed as 2:23 by YouTube. Actual browser actions with disclosed English synthetic narration.
 - [Backup MP4 download](https://github.com/yangmengze608-afk/ContriPact-DevpostLearn/releases/tag/transparent-split-v1).
-- Devpost: not submitted. See the local current status for remaining blockers.
+- Devpost: **submitted on October 24, 2026** — [project page](https://devpost.com/software/contripact-transparent-prize-split). The platform displayed “Project submitted!” and “Submitted to Build With AI: Basics”; see [receipt](submission/publication-receipt.json).
 
 MIT license. Historical AI modules retain their prior dependencies in the lockfile to preserve the existing project; the default browser bundle does not import them.

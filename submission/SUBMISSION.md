@@ -1,4 +1,6 @@
-# Devpost submission package — AI-assisted draft, not a submission receipt
+# Devpost submission copy — AI-assisted
+
+**Status: submitted on October 24, 2026.** Project: https://devpost.com/software/contripact-transparent-prize-split . Formal evidence is in publication-receipt.json; this file records prepared copy, not a substitute for the platform receipt.
 
 ## Project name
 ContriPact — Transparent Prize Split
@@ -45,3 +47,8 @@ Age of majority, eligibility/residency exclusions, resource attendance, learner 
 - https://github.com/challengepost/learn-ai-basics
 
 Deadline: October 26, 2026, 5pm EDT = October 27, 2026, 05:00 Beijing. Internal target: October 26, 22:00 Beijing.
+
+## Exact saved technology-requirement answer (238 characters)
+Used the official 1-start to 6-ship pack in Codex. User-supplied answers guided root scope.md, prd.md and spec.md, followed by build/tests and shipping. Written requirements replaced a new live interview; no learner reflection is claimed.
+
+The actual form limits this answer to 255 characters. The longer explanation above remains background documentation. Required personal answers were supplied by the user; two qualification checkboxes were checked by the user, and final legal acceptance/submission was explicitly authorized at action time. Personal survey answers are not copied into this public package.
